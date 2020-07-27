@@ -12,7 +12,7 @@ export class PrincipalComponent implements OnInit {
 
   constructor(private producosService: ProductosService) {
       this.productos = producosService.productos.rows;
-      console.log(JSON.stringify(this.productos))
+     // console.log(JSON.stringify(this.productos))
    }
 
   ngOnInit(): void {

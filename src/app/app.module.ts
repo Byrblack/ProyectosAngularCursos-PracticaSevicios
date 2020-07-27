@@ -4,8 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {ProductosService} from './servicio/productos.service';
-import {PersonaService} from './servicio/persona.service';
+import { ProductosService} from './servicio/productos.service';
 import { PrincipalComponent } from './principal/principal.component';
 import { PersonaComponent } from './persona/persona.component';
 import{HttpClientModule} from '@angular/common/http';
@@ -23,8 +22,8 @@ import{HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     FormsModule, 
     ReactiveFormsModule,
-    ProductosService,
-    PersonaService,
+    //ProductosService
+    //PersonaService
     
     ],
   providers: [],

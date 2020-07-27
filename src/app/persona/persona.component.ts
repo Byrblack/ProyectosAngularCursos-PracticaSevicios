@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PersonaService} from '../servicio/persona.service';
+import {PersonaService} from '../servicioPersona/persona.service';
 
 
 @Component({
@@ -8,9 +8,13 @@ import {PersonaService} from '../servicio/persona.service';
   styleUrls: ['./persona.component.css']
 })
 export class PersonaComponent implements OnInit {
-  agregarPersonaRegistro:any={Nombre:'', Apellido:'',Edad:10};
-  
-  constructor(private perosnaService: PersonaService) { }
+  agregarPersonaRegistro:any={Nombre:'', Apellido:'',Edad:''};
+  personas:any;
+
+  constructor() { 
+
+    this.personas=[];
+  }
 
   ngOnInit(): void {
   }

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductosService {
 
   productos: any ={"total_rows":6302,"offset":0,"rows":[
