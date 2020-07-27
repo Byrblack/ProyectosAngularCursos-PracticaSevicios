@@ -24,10 +24,9 @@ import{HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
     ProductosService,
     PersonaService,
-    HttpClientModule,
-    
-  ],
+    HttpClientModule
+    ],
   providers: [],
-  bootstrap: [PrincipalComponent]
+  bootstrap: [PersonaComponent]
 })
 export class AppModule { }
