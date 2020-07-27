@@ -20,11 +20,12 @@ import{HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule, 
     ReactiveFormsModule,
     ProductosService,
     PersonaService,
-    HttpClientModule
+    
     ],
   providers: [],
   bootstrap: [PersonaComponent]
