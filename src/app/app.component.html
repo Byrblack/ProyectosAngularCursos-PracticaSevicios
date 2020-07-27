@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <div class="form-group">
+        <h1>FORMULARIOS REACTIVOS</h1>
+      </div>
+        <form [formGroup]="formulario" (submit)="onSubmit(formulario)" >
+          <div class="form-group">
+            <input type="text" class="form-control" id="Name" formControlName="Name" > 
+            <div class="errordatos" *ngIf="formulario.controls.Name.errors">
+                * Campo obligatorio
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="Email" formControlName="Email"> 
+            <div class="errordatos"   *ngIf="formulario.controls.Email.errors">
+              * Campo obligatorio
+          </div>
+          </div>
+          <div class="form-group">
+             <input type="text" class="form-control" id="Adress" formControlName="Adress"> 
+             <div class="errordatos" *ngIf="formulario.controls.Adress.errors">
+              * Campo obligatorio
+            </div>
+          </div>
+           <div class="form-group">
+             <input type="text" class="form-control" id="City" formControlName="City" > 
+             <div class="errordatos" *ngIf="formulario.controls.City.errors">
+              * Campo obligatorio
+          </div>
+            </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="State" formControlName="State" > 
+            <div class="errordatos" *ngIf="formulario.controls.State.errors">
+              * Campo obligatorio
+          </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="Country" formControlName="Country"> 
+            <div class="errordatos" *ngIf="formulario.controls.PhoneNumber.errors">
+              * Campo obligatorio
+          </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="PhoneNumber" formControlName="PhoneNumber" >
+            <div class="errordatos" *ngIf="formulario.controls.PhoneNumber.errors">
+              * Campo obligatorio
+          </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="MobileNumber" formControlName="MobileNumber" >
+            <div class="errordatos" *ngIf="formulario.controls.MobileNumber.errors">
+              * Campo obligatorio
+          </div>
+          </div>
+        
+          <button type="submit" class="btn btn-primary form-control">Guardar </button>
+        </form>
+    </div>
+  </div>
+</div>
