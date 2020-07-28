@@ -8,15 +8,23 @@ import {PersonaService} from '../servicioPersona/persona.service';
   styleUrls: ['./persona.component.css']
 })
 export class PersonaComponent implements OnInit {
-  agregarPersonaRegistro:any={Nombre:'', Apellido:'',Edad:''};
+  agregarPersonaRegistro:any={_id:'',Nombre:'', Apellido:'',Edad:'',isProfesional:true};
   personas:any;
 
-  constructor() { 
-
-    this.personas=[];
+  constructor(private personaService: PersonaService) { 
+    this.obternerPersonas();
+    
   }
 
   ngOnInit(): void {
+  }
+
+  obternerPersonas(){
+    this.personaService.obtenerTodasLasPersonas().subscribe(resultado=>{
+      this.personas= resultado.personas;
+    },error =>{
+        console.log(JSON.stringify(error));
+    })
   }
 
   eliminarPersona(identificador){
@@ -24,7 +32,14 @@ export class PersonaComponent implements OnInit {
   }
 
   agregarPersona(){
-    console.log("agregar personas");
+    this.personaService.agregarPersona(this.agregarPersonaRegistro).subscribe(
+      resultado=>{
+          this.obternerPersonas();
+      },error=>{
+        console.log("Error en agregar persona")
+      }
+    )
   }
+
 
 }
